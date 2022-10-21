@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body{
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    width: 100vw;
+    height: 100vh;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-group {
+    
+    margin: 1.6rem 0;
+    position: relative;
+}
+form {
+    background-color: white;
+    padding: 1rem 1.2rem;
+    box-shadow: .4px 4px 12px rgba(0,0,0, .2);
+    border-radius: 1rem;
+
+}
+form h2 {
+    text-align: center;
+    font-weight: 400;
+    user-select: none;
+    
+}
+form input {
+    display: block;
+    margin: 0 auto;
+    border:none;
+    border-bottom: 1px solid dodgerblue;
+    outline: none;
+    padding: 6px 4px;
+}
+form label {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    font-weight: 400;
+    font-size: 15px;
+    pointer-events: none;
+    color: gray;
+    transition: 200ms ease;
+}
+input:focus + label, input:valid + label {
+    top: -14px;
+    left: 10px;
+    font-size: 13px;
+    color: dodgerblue;
+}
+form button {
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    padding: 1rem 2rem;
+    border: none;
+    color: white;
+    border-radius: 2rem;
+    width: 100%;
+    cursor: pointer;
+    transition: 200ms;
+}
+form p {
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 2rem;
+}
+form p a {
+    color: inherit;
+}
+.signup{
+    color: dodgerblue;
+}
+
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>Welcome</h2>
+
+    <div class="input-group">
+        <input type="text" id="username" required>
+        <label for="username">Username</label>
+    </div>
+    
+    <div class="input-group">
+        <input type="password" id="password" required>
+        <label for="password">Password</label>
+    </div>
+    <br>
+    <button type="submit">Login</button>
+    <p>Don't have account?<a href="{{app_player}}" class="signup">Sign Up</a></p>
+    </form>
+</body>
+</html>
