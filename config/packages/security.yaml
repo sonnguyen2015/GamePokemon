@@ -17,6 +17,11 @@ security:
         main:
             lazy: true
             provider: app_user_provider
+            custom_authenticator: App\Security\LoginAuthenticator
+            logout:
+                path: app_logout
+                # where to redirect after logout
+                target: app_landing_page
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -42,3 +47,4 @@ when@test:
                 cost: 4 # Lowest possible value for bcrypt
                 time_cost: 3 # Lowest possible value for argon
                 memory_cost: 10 # Lowest possible value for argon
+        
